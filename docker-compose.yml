@@ -1,6 +1,6 @@
 services:
   main:
-    container_name: script
+    container_name: main
     build:
       context: .
       dockerfile: dockerfile
