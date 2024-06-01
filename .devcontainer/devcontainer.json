@@ -16,7 +16,6 @@
 				"ms-vscode-remote.remote-containers",
 				"ms-azuretools.vscode-docker",
 				"ms-python.flake8",
-				"mhutchie.git-graph",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"magicstack.MagicPython",
@@ -34,7 +33,9 @@
 				"mtxr.sqltools-driver-sqlite",
 				"mechatroner.rainbow-csv",
 				"mtxr.sqltools-driver-pg",
-				"redhat.vscode-yaml"
+				"redhat.vscode-yaml",
+				"batisteo.vscode-django",
+				"eamodio.gitlens"
 			]
 		}
 	}
