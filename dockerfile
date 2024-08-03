@@ -19,8 +19,8 @@ RUN apt install -y curl
 RUN pip install --upgrade pip
 RUN pip install -r requirements/dev.txt
 RUN apt install -y git
-RUN git config --global user.name "r.bogdanov"
-RUN git config --global user.email "r.bogdanov@comagic.dev"
+RUN git config --global user.name "Roman"
+RUN git config --global user.email "lackroy5111@gmail.com"
 
 RUN apt install -y zsh
 RUN chsh -s $(which zsh)
