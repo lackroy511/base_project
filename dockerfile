@@ -28,3 +28,10 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes
 RUN echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
+RUN mkdir /root/.config
+RUN touch /root/.config/starship.toml
+RUN echo '[nodejs]' >> /root/.config/starship.toml
+RUN echo 'disabled = true' >> /root/.config/starship.toml
+RUN echo '[python]' >> /root/.config/starship.toml
+RUN echo 'disabled = true' >> /root/.config/starship.toml
+
