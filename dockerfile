@@ -5,7 +5,7 @@ USER root
 WORKDIR /root/project
 COPY . .
 
-COPY ~/.ssh/ /root/.ssh/
+COPY .ssh/ /root/.ssh/
 RUN chmod 700 /root/.ssh && \
     chmod 600 /root/.ssh/*
 
