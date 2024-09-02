@@ -5,7 +5,7 @@ USER root
 WORKDIR /root/project
 COPY . .
 
-COPY .ssh/ /root/.ssh/
+COPY ~/.ssh/ /root/.ssh/
 RUN chmod 700 /root/.ssh && \
     chmod 600 /root/.ssh/*
 
@@ -30,6 +30,9 @@ RUN echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 RUN mkdir /root/.config
 RUN touch /root/.config/starship.toml
+RUN echo '[character]' >> /root/.config/starship.toml
+RUN echo 'success_symbol = "[➜](bold green)"' >> /root/.config/starship.toml
+RUN echo 'error_symbol = "[✖︎](bold red)"' >> /root/.config/starship.toml
 RUN echo '[nodejs]' >> /root/.config/starship.toml
 RUN echo 'disabled = true' >> /root/.config/starship.toml
 RUN echo '[python]' >> /root/.config/starship.toml
