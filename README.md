@@ -12,3 +12,6 @@
 
 - launch.json
     - Сконфигурировать запуск проекта в дебаггере в файле .vscode/launch.json
+
+- Сбилдить девконтейнер в vscode
+    - F1 -> Dev Containers: Rebuild and Reopen in Container
