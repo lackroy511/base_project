@@ -13,5 +13,9 @@
 - launch.json
     - Сконфигурировать запуск проекта в дебаггере в файле .vscode/launch.json
 
+- docker
+    - в корне dockerfile проекта изменить name, email для git
+    - ...
+
 - Сбилдить девконтейнер в vscode
     - F1 -> Dev Containers: Rebuild and Reopen in Container
