@@ -4,18 +4,20 @@
 
 - ssh:
     - переименовать .ssh.example -> .ssh
-    - Скопировать ssh-ключи из систем в директорию .ssh в корне проекта
+    - Скопировать ssh-ключи из системы в директорию .ssh в корне проекта
 
 - .env
-    - переименовать  .env.main -> .env
+    - переименовать .env.main -> .env
     - прописать переменные окружения
 
 - launch.json
     - Сконфигурировать запуск проекта в дебаггере в файле .vscode/launch.json
 
 - docker
-    - в корне dockerfile проекта изменить name, email для git
+    - в корне проекта dockerfile изменить name, email для git
     - ...
+
+- Из корня проекта удалить директорию .git
 
 - Сбилдить девконтейнер в vscode
     - F1 -> Dev Containers: Rebuild and Reopen in Container
