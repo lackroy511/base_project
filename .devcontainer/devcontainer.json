@@ -35,7 +35,8 @@
 				"mtxr.sqltools-driver-pg",
 				"redhat.vscode-yaml",
 				"batisteo.vscode-django",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"angus-mcritchie.quote-swapper"
 			]
 		}
 	}
