@@ -38,3 +38,8 @@ RUN echo 'disabled = true' >> /root/.config/starship.toml
 RUN echo '[python]' >> /root/.config/starship.toml
 RUN echo 'disabled = true' >> /root/.config/starship.toml
 
+RUN pip install flake8 flake8-bugbear pep8-naming flake8-commas \
+    flake8-multiline-containers flake8-class-attributes-order \ 
+    flake8-clean-block flake8-indent-in-def flake8-newspaper-style \
+    flake8-return flake8-length flake8-quotes flake8-import-order \
+    flake8-docstrings isort
