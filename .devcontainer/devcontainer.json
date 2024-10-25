@@ -11,7 +11,6 @@
 		"vscode": {
 			"extensions": [
 				"njpwerner.autodocstring",
-				"ms-python.autopep8",
 				"streetsidesoftware.code-spell-checker",
 				"ms-vscode-remote.remote-containers",
 				"ms-azuretools.vscode-docker",
@@ -36,7 +35,13 @@
 				"redhat.vscode-yaml",
 				"batisteo.vscode-django",
 				"eamodio.gitlens",
-				"angus-mcritchie.quote-swapper"
+				"angus-mcritchie.quote-swapper",
+				"ms-python.black-formatter",
+				"usernamehw.errorlens",
+				"littlefoxteam.vscode-python-test-adapter",
+				"mtxr.sqltools-driver-mssql",
+				"ms-vscode.test-adapter-converter",
+				"hbenl.vscode-test-explorer"
 			]
 		}
 	}
