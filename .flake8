@@ -1,7 +1,6 @@
 [flake8]
 exclude =
 extend-ignore =
-    D100
 max-line-length = 89
 inline-quotes = double
 multiline-quotes = double
