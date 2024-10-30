@@ -3,9 +3,9 @@ FROM python:3.12.7-slim
 USER root
 
 WORKDIR /root/project
-COPY . .
+COPY .. .
 
-COPY .ssh/ /root/.ssh/
+COPY ../.ssh/ /root/.ssh/
 RUN chmod 700 /root/.ssh && \
     chmod 600 /root/.ssh/*
 
@@ -19,8 +19,8 @@ RUN apt install -y curl
 RUN pip install --upgrade pip
 RUN pip install -r requirements/dev.txt
 RUN apt install -y git
-RUN git config --global user.name "Roman"
-RUN git config --global user.email "lackroy5111@gmail.com"
+RUN git config --global user.name ""
+RUN git config --global user.email ""
 
 RUN apt install -y zsh
 RUN chsh -s $(which zsh)

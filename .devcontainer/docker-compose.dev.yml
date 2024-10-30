@@ -2,15 +2,15 @@ services:
   main:
     container_name: main
     build:
-      context: .
-      dockerfile: dockerfile
+      context: ..
+      dockerfile: .devcontainer/dockerfile.dev
     ports:
       - "4050:4050"
     command: tail -f /dev/null
     volumes:
-      - .:/root/project
+      - ..:/root/project
     env_file:
-      - .env
+      - ../.env
     deploy:
       resources:
         limits:
