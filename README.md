@@ -13,9 +13,9 @@
 - launch.json
     - Сконфигурировать запуск проекта в дебаггере в файле .vscode/launch.json
 
-- docker
-    - в корне проекта dockerfile изменить name, email для git
-    - ...
+- .devcontainer
+    - в dockerfile.dev изменить name, email для git
+    - в devcontainer.json и docker-compose.dev.yml изменить "service" и "container_name"
 
 - Из корня проекта удалить директорию .git
 
