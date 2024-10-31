@@ -9,7 +9,7 @@ COPY ../.ssh/ /root/.ssh/
 RUN chmod 700 /root/.ssh && \
     chmod 600 /root/.ssh/*
 
-ENV PYTHONPATH="${PYTHONPATH}:/root/project"
+ENV PYTHONPATH="${PYTHONPATH}:/root/project/app"
 
 RUN apt update 
 
