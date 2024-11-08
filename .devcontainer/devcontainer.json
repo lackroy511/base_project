@@ -41,7 +41,8 @@
 				"ms-vscode.test-adapter-converter",
 				"hbenl.vscode-test-explorer",
 				"matangover.mypy",
-				"Supermaven.supermaven"
+				"Supermaven.supermaven",
+				"Blackboxapp.blackbox"
 			]
 		}
 	}
