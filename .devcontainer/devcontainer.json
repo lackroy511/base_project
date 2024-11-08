@@ -27,7 +27,6 @@
 				"streetsidesoftware.code-spell-checker-russian",
 				"qwtel.sqlite-viewer",
 				"mtxr.sqltools",
-				"TabNine.tabnine-vscode",
 				"SeeLog.python-init-generator",
 				"mtxr.sqltools-driver-sqlite",
 				"mechatroner.rainbow-csv",
@@ -41,7 +40,8 @@
 				"mtxr.sqltools-driver-mssql",
 				"ms-vscode.test-adapter-converter",
 				"hbenl.vscode-test-explorer",
-				"matangover.mypy"
+				"matangover.mypy",
+				"Supermaven.supermaven"
 			]
 		}
 	}
