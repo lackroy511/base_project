@@ -2,5 +2,6 @@
     "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}"
-    }
+    },
+    "python.analysis.autoImportCompletions": true
 }
