@@ -43,7 +43,8 @@
 				"matangover.mypy",
 				"Supermaven.supermaven",
 				"Blackboxapp.blackbox",
-				"christian-kohler.path-intellisense"
+				"christian-kohler.path-intellisense",
+				"dbaeumer.vscode-eslint"
 			]
 		}
 	}
