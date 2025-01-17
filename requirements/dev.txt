@@ -11,6 +11,8 @@ flake8-newspaper-style
 flake8-return
 flake8-length
 flake8-quotes
+flake8-logging 
+flake8-logging-format
 isort
 mypy
 black
