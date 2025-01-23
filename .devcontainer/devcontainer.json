@@ -43,8 +43,7 @@
 				"matangover.mypy",
 				"Supermaven.supermaven",
 				"christian-kohler.path-intellisense",
-				"naumovs.color-highlight",
-				"slightc.pip-manager"
+				"naumovs.color-highlight"
 			]
 		}
 	}
