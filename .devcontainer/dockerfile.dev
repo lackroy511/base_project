@@ -1,39 +1,51 @@
 FROM python:3.12.7-slim
 
-USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    curl \
+    zsh \
+    nodejs \
+    openssh-client \ 
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /root/project
+RUN useradd --create-home --shell /usr/bin/zsh appuser
+
+WORKDIR /app
+
+COPY ../requirements/prod.txt ./requirements/prod.txt
+RUN pip install --no-cache-dir --upgrade pip \
+  && pip install --no-cache-dir -r requirements/prod.txt
+
+RUN mkdir -p /home/appuser/.ssh
+COPY .ssh/ /home/appuser/.ssh/
+RUN chown -R appuser:appuser /home/appuser/.ssh
+RUN chmod 700 /home/appuser/.ssh
+RUN chmod 600 /home/appuser/.ssh/*
+
 COPY .. .
 
-COPY ../.ssh/ /root/.ssh/
-RUN chmod 700 /root/.ssh && \
-    chmod 600 /root/.ssh/*
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-ENV PYTHONPATH="${PYTHONPATH}:/root/project"
+RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir /usr/local/bin
 
-RUN apt update 
+USER appuser
 
-RUN apt install -y nodejs
-
-RUN apt install -y curl
-RUN pip install --upgrade pip
-RUN pip install -r requirements/dev.txt
-RUN apt install -y git
-RUN git config --global user.name ""
-RUN git config --global user.email ""
-
-RUN apt install -y zsh
-RUN chsh -s $(which zsh)
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes
 RUN echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
-RUN mkdir /root/.config
-RUN touch /root/.config/starship.toml
-RUN echo '[character]' >> /root/.config/starship.toml
-RUN echo 'success_symbol = "[➜](bold green)"' >> /root/.config/starship.toml
-RUN echo 'error_symbol = "[✖︎](bold red)"' >> /root/.config/starship.toml
-RUN echo '[nodejs]' >> /root/.config/starship.toml
-RUN echo 'disabled = true' >> /root/.config/starship.toml
-RUN echo '[python]' >> /root/.config/starship.toml
-RUN echo 'disabled = true' >> /root/.config/starship.toml
+
+RUN mkdir -p /home/appuser/.config && \
+    echo '[character]' >> /home/appuser/.config/starship.toml && \
+    echo 'success_symbol = "[➜](bold green)"' >> /home/appuser/.config/starship.toml && \
+    echo 'error_symbol = "[✖︎](bold red)"' >> /home/appuser/.config/starship.toml && \
+    echo '[nodejs]' >> /home/appuser/.config/starship.toml && \
+    echo 'disabled = true' >> /home/appuser/.config/starship.toml && \
+    echo '[python]' >> /home/appuser/.config/starship.toml && \
+    echo 'disabled = true' >> /home/appuser/.config/starship.toml
+
+RUN git config --global user.name "" && \
+    git config --global user.email ""
+
+WORKDIR /app
