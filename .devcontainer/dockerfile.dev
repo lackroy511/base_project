@@ -13,10 +13,9 @@ RUN useradd --create-home --shell /usr/bin/zsh appuser
 
 WORKDIR /app
 
-COPY ../requirements/prod.txt ./requirements/prod.txt
-COPY ../requirements/prod.txt ./requirements/dev.txt
-RUN pip install --no-cache-dir --upgrade pip \
-  && pip install --no-cache-dir -r ./requirements/dev.txt
+COPY ../requirements/ ./requirements/
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r ./requirements/dev.txt
 
 RUN mkdir -p /home/appuser/.ssh
 COPY .ssh/ /home/appuser/.ssh/
