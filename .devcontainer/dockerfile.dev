@@ -15,7 +15,7 @@ WORKDIR /app
 
 COPY ../requirements/prod.txt ./requirements/prod.txt
 RUN pip install --no-cache-dir --upgrade pip \
-  && pip install --no-cache-dir -r requirements/prod.txt
+  && pip install --no-cache-dir -r ./requirements/prod.txt
 
 RUN mkdir -p /home/appuser/.ssh
 COPY .ssh/ /home/appuser/.ssh/
