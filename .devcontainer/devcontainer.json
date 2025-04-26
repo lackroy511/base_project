@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
 {
-	"name": "main",
+	"name": "characters_bot",
 	"dockerComposeFile": [
 		"docker-compose.dev.yml"
 	],
-	"service": "main",
-	"workspaceFolder": "/root/project",
+	"service": "characters_bot",
+	"workspaceFolder": "/app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
