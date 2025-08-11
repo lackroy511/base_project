@@ -3,5 +3,4 @@
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}"
     },
-    "python.analysis.autoImportCompletions": true
 }
