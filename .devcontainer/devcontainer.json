@@ -42,7 +42,15 @@
 				"hbenl.vscode-test-explorer",
 				"matangover.mypy",
 				"christian-kohler.path-intellisense",
-				"naumovs.color-highlight"
+				"naumovs.color-highlight",
+				"docker.docker",
+				"dbaeumer.vscode-eslint",
+				"solnurkarim.html-to-css-autocompletion",
+				"glenn2223.live-sass",
+				"ritwickdey.LiveServer",
+				"peakchen90.open-html-in-browser",
+				"syler.sass-indented",
+				"Supermaven.supermaven"
 			]
 		}
 	}
