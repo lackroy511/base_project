@@ -1,6 +1,6 @@
 services:
-  characters_bot:
-    container_name: characters_bot
+  <my_project_name>:
+    container_name: <my_project_name>
     build:
       context: ..
       dockerfile: .devcontainer/dockerfile.dev
@@ -8,28 +8,12 @@ services:
       - "4051:4051"
     command: tail -f /dev/null
     volumes:
-      - ..:/root/project
+      - ..:/<my_project_name>
     env_file:
       - ../.env
     depends_on:
       characters_db:
         condition: service_healthy
-
-
-  characters_db:
-    image: postgres:17
-    container_name: characters_db
-    env_file:
-      - ../.env
-    volumes:
-      - characters_db:/var/lib/postgresql/data
-    ports:
-      - "5443:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
 
 volumes:
   characters_db:
